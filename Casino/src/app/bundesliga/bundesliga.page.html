@@ -1,0 +1,170 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+     <ion-title><img src="assets/icon/inicio_images/bundesliga.png" alt="" height="20px" width="20px"> Bundesliga </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">bundesliga</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<div class="tabla-apuesta">
+  <table class="tabla-posicion" >
+
+    <tr>
+      <th class="th-posicion">Partido</th>
+      <th class="th-posicion">1</th>
+      <th class="th-posicion">X</th>
+      <th class="th-posicion">2</th>
+    </tr>
+    
+    <tr>
+      <th class="th-posicion">Bayern vs Dortmund</th>
+      <th class="th-posicion">2.00</th>
+      <th class="th-posicion">3.45</th>
+      <th class="th-posicion">4.50</th>
+    </tr>
+
+    <tr>
+      <th class="th-posicion">Colonia vs Leverkuse</th>
+      <th class="th-posicion">3.25</th>
+      <th class="th-posicion">2.10</th>
+      <th class="th-posicion">4.40</th>
+    </tr>
+
+    <tr>
+      <th class="th-posicion">Leipzig vs Shalke</th>
+      <th class="th-posicion">1.85</th>
+      <th class="th-posicion">2.30</th>
+      <th class="th-posicion">4.60</th>
+    </tr>
+
+    <tr>
+      <th class="th-posicion">Frankfurt vs Wolfsburgo</th>
+      <th class="th-posicion">2.70</th>
+      <th class="th-posicion">2.10</th>
+      <th class="th-posicion">3.30</th>
+    </tr>
+
+  </table>
+</div>
+
+  <div class="tabladeposiciones">
+    <table class="tabla-posicion" >
+
+      <tr>
+        <th class="th-posicion">Equipo</th>
+        <th class="th-posicion">Posicion</th>
+        <th class="th-posicion">Puntos</th>
+        <th class="th-posicion">PJ</th>
+        <th class="th-posicion">PG</th>
+        <th class="th-posicion">PP</th>
+        <th class="th-posicion">PE</th>
+      </tr>
+
+      <tr>
+        <th class="th-posicion"><img src="assets/icon/inicio_images/bayer.png" alt=""></th>
+        <th class="th-posicion">1</th>
+        <th class="th-posicion">40</th>
+        <th class="th-posicion">17</th>
+        <th class="th-posicion">13</th>
+        <th class="th-posicion">3</th>
+        <th class="th-posicion">1</th>
+      </tr>
+
+       <tr>
+        <th class="th-posicion"><img src="assets/icon/inicio_images/borusia.png" alt=""></th>
+        <th class="th-posicion">1</th>
+        <th class="th-posicion">40</th>
+        <th class="th-posicion">17</th>
+        <th class="th-posicion">13</th>
+        <th class="th-posicion">3</th>
+        <th class="th-posicion">1</th>
+      </tr>
+
+      <tr>
+        <th class="th-posicion"><img src="assets/icon/inicio_images/leipzig.png" alt=""></th>
+        <th class="th-posicion">1</th>
+        <th class="th-posicion">40</th>
+        <th class="th-posicion">17</th>
+        <th class="th-posicion">13</th>
+        <th class="th-posicion">3</th>
+        <th class="th-posicion">1</th>
+      </tr>
+
+      <tr>
+        <th class="th-posicion"><img src="assets/icon/inicio_images/leverkusen.png" alt=""></th>
+        <th class="th-posicion">1</th>
+        <th class="th-posicion">40</th>
+        <th class="th-posicion">17</th>
+        <th class="th-posicion">13</th>
+        <th class="th-posicion">3</th>
+        <th class="th-posicion">1</th>
+      </tr>
+
+      <tr>
+        <th class="th-posicion"><img src="assets/icon/inicio_images/frankfurt.png" alt=""></th>
+        <th class="th-posicion">1</th>
+        <th class="th-posicion">40</th>
+        <th class="th-posicion">17</th>
+        <th class="th-posicion">13</th>
+        <th class="th-posicion">3</th>
+        <th class="th-posicion">1</th>
+      </tr>
+
+     
+
+      <tr>
+        <th class="th-posicion"><img src="assets/icon/inicio_images/wolfsburgo.png" alt=""></th>
+        <th class="th-posicion">1</th>
+        <th class="th-posicion">40</th>
+        <th class="th-posicion">17</th>
+        <th class="th-posicion">13</th>
+        <th class="th-posicion">3</th>
+        <th class="th-posicion">1</th>
+      </tr>
+
+      <tr>
+        <th class="th-posicion"><img src="assets/icon/inicio_images/colonia.png" alt=""></th>
+        <th class="th-posicion">1</th>
+        <th class="th-posicion">40</th>
+        <th class="th-posicion">17</th>
+        <th class="th-posicion">13</th>
+        <th class="th-posicion">3</th>
+        <th class="th-posicion">1</th>
+      </tr>
+    </table>
+  </div>
+
+
+
+
+
+
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="mx" (click)="mx()">
+        <ion-icon name="albums-outline"></ion-icon>
+        Liga Mx
+      </ion-tab-button>
+      <ion-tab-button tab="mx" (click)="pl()">
+        <ion-icon name="albums-outline"></ion-icon>
+        Premier League
+      </ion-tab-button>
+    
+       <ion-tab-button tab="mx" (click)="bu()">
+        <ion-icon name="albums-outline"></ion-icon>
+        Bundesliga
+      </ion-tab-button>
+       <ion-tab-button tab="mx" (click)="nb()">
+        <ion-icon name="albums-outline"></ion-icon>
+        NBA
+      </ion-tab-button>
+    </ion-tab-bar>
+
+  </ion-tabs>
+</ion-content>

@@ -1,0 +1,84 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" [routerLink]="'/black-jack'">
+      <ion-icon name="arrow-back-outline" class="ion-padding"></ion-icon>
+    </ion-buttons>
+    <ion-title>Información</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <img src="assets/icon/inicio_images/blackjack-card.png" alt="Card 1">
+    <ion-card-header>
+      <ion-card-title>Objetivo del juego</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label>
+        <ion-label>
+          En el blackjack cada jugador juega contra el crupier. El objetivo del juego es conseguir sumar 21 puntos o al menos conseguir sin pasarse un valor más cercano a 21 que el crupier.
+        </ion-label>
+        <ion-label>
+          Los valores de las cartas en el blackjack son los siguientes:<br>
+        </ion-label>
+      <ion-label>
+        <p>Las cartas del 2 al 10 valen su valor</p>
+        <p>Las figuras valen 10</p>
+        <p>El AS vale 1 u 11 dependiendo de lo que le convenga al jugador</p>
+        <p>La jugada máxima del juego es blackjack, un jugador tiene blackjack cuando sus dos cartas iniciales sumen 21, es decir, sean un AS y una carta con valor 10 (10 o cualquier figura).</p>
+      </ion-label>
+      </ion-label>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <img src="assets/icon/inicio_images/jugada-blackjack.jpg">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card>
+    <img src="assets/icon/inicio_images/desenlace-partida-blackjack.jpg" alt="Card 1">
+    <ion-card-header>
+      <ion-card-title>Cómo se juega al blackjack y las apuestas del juego</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label>
+        <ion-label>
+          Al inicio de la partida cada jugador deberá realizar su apuesta inicial, después de que todos los jugadores hayan realizados sus apuestas el crupier dirá “no va más” para cerrar la ronda de apuestas y empezar con el reparto de cartas.
+        </ion-label>
+        <ion-label>
+          El crupier repartirá dos cartas descubiertas a cada jugador y una a sí mismo, también descubierta. Después del reparto de cartas, el crupier le dará paso al jugador situado más a su izquierda para que juegue su mano, después de que este jugador juegue su mano, el crupier le dará paso al siguiente jugador y así sucesivamente hasta que finalmente sea el crupier quien juegue su mano.<br>
+        </ion-label>
+      <ion-label>
+        <p>Los jugadores que se queden más lejos de 21 que el crupier o se hayan pasado pierden sus apuestas. Los jugadores que empaten con el crupier, no ganan ni pierden, recuperan su apuesta.</p>
+        <p>Las apuestas ganadoras con la jugada blackjack se pagan 3 a 2 (que es lo mismo que decir 1,5 a 1), el resto de apuestas ganadoras, jugadores que se hayan quedado más cerca de 21 que el crupier, se pagarán 1 a 1.</p>
+        <p>Cada jugador solo dispone de un turno para jugar su mano, en su turno podrá:</p>
+        <p>Pedir Carta: un jugador podrá pedir las cartas que deseen mientras su mano este por debajo de los 21 puntos. Si al pedir carta el jugador se pasa de 21, el crupier el retirará las cartas y las recogerá sus apuestas.</p>
+        <p>Plantarse: un jugador se puede plantar en cualquier momento.</p>
+      </ion-label>
+      </ion-label>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <img src="assets/icon/inicio_images/zona-apuestas-mesa-blackjack.jpg" alt="Card 1">
+    <ion-card-header>
+      <ion-card-title>Apuestas de seguro – La carta del crupier es un AS</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label>
+        <ion-label>
+          Si la carta del crupier es un AS, el crupier inmediatamente después del reparto de cartas, antes de dar paso a que los jugadores jueguen su mano, ofrecerá a los jugadores la posibilidad de realizar las apuestas de seguro.
+        </ion-label>
+      <ion-label>
+        <p>Con la apuesta de seguro un jugador apuesta a que el crupier conseguirá la jugada de blackjack. Para hacer la apuesta de seguro se deberá colocar la mitad de la apuesta inicial en la línea de seguro de la mesa de blackjack. El pago de la apuesta de seguro es a razón de 2 a 1. </p>
+        <p>Si el crupier consigue blackjack pagará a cada jugador que realizó la apuesta de seguro el doble de lo que aposto en la línea de seguro. Si el crupier no consigue blackjack recoge todas las apuestas de seguro.</p>
+      </ion-label>
+      </ion-label>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,62 @@
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Cajero</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="ion-padding"> 
+
+      <ion-grid >
+        <ion-row>
+          <ion-col>
+            <ion-item class="custom-rounded-list">
+              <ion-icon name="cash-outline"></ion-icon>
+              <ion-label class="ion-padding">Dinero real:</ion-label>
+              <ion-icon slot="end" (click)="toggleSaldo()"  name="{{ saldoVisible ? 'eye-off-outline' : 'eye-outline' }}"></ion-icon>
+              <ion-card class="ion-padding" slot="end">
+                <ion-label>$ {{ saldoVisible ? ocultarSaldo() : mostrarSaldo() }}</ion-label>
+              </ion-card>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item class="custom-rounded-list">
+              <ion-icon name="nuclear-outline"></ion-icon>
+              <ion-label class="ion-padding">Dinero promo:</ion-label>
+              <ion-card class="ion-padding" slot="end">
+                <ion-label>$0.00</ion-label>
+              </ion-card>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+
+      <ion-card>
+        <img src="assets/icon/inicio_images/bono.jpg" alt="Poster 4">
+        <ion-card-header>
+          <ion-card-title>Bonos</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Verifica los bonos disponibles en nuestra seccion de bonos
+        </ion-card-content>
+      </ion-card>
+
+
+      <ion-tabs>
+        <ion-tab-bar slot="bottom">
+          <ion-tab-button tab="depositar" [routerLink]="'/depositar'">
+            <ion-icon name="wallet-outline"></ion-icon>
+            Depositar
+          </ion-tab-button>
+          <ion-tab-button tab="retirar" [routerLink]="'/retirar'">
+            <ion-icon name="cash-outline"></ion-icon>
+            Retirar
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+
+  </ion-content>

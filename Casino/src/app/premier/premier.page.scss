@@ -1,0 +1,79 @@
+*{
+    Margin:0;
+    Padding:0;
+    Box-sizing: border-box;
+    Font-family: sans-serif;
+    
+    }
+    
+    body{
+    
+    Align-items:center;
+    Justify-content:center;
+    Min-height:100vh;
+    }
+    
+    .container{
+    border: solid 1px;
+    Border-bottom-color:#262626;
+    Border-top-color:#262626;
+    Border-left-color:#262626;
+    Border-right-color:#262626;
+    Display:block;
+    }
+    
+    table .apuesta{
+    Font-size:14px;
+    Table-layout: fixed;
+    Border-collapse:collapse;
+    
+    }
+    
+    thead{
+    background: #262626;
+    }
+    
+    th .encabezado-apuesta{
+    Padding:20px 150px;
+    Font-weight:700;
+    Text-transform:uppercase;
+    }
+    
+    .tabla-apuesta{
+    border: solid 1px;
+    Border-bottom-color: #313131;
+    border-top-color: #262626;
+    border-right-color: #262626;
+    border-left-color: #262626;
+    border-color: #313131;
+    Display:block;
+    }
+    
+    .tabla-apuesta th{
+        border: solid 1px;
+        Border-bottom-color: #313131;
+        border-color: #313131;
+        }
+    
+    #iluminar:hover{
+    background: #6C6C6C;
+    }
+    
+    #iluminar{
+    Cursor:pointer;
+    }
+    
+    .tabla-posicion{
+    Width:100%;
+    Margin-top:20px;
+    }
+    
+    .th-posicion{
+    Padding:5px;
+    }
+    
+    Tr img{
+    Width:50px;
+    Height:50px;	
+    }
+

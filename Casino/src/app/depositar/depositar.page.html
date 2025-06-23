@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" [routerLink]="'/cajero'">
+      <ion-icon name="arrow-back-outline" class="ion-padding"></ion-icon>
+    </ion-buttons>
+    <ion-title>Deposito</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <ion-list class="custom-rounded-list">
+      <ion-item>
+        <ion-label  position="floating" color="primary">Nombre del titular</ion-label>
+        <ion-input required maxlength="40" placeholder="Ingrese su nombre completo" [(ngModel)]="titular" name="nombre"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating" color="primary">Número de tarjeta</ion-label>
+        <ion-input required [class.ion-invalid]="isInvalid" type="number" placeholder="Ingrese su numero de tarjeta" [(ngModel)]="numTarjeta" name="deposito"></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating" color="primary">CVV</ion-label>
+            <ion-input required [class.ion-invalid]="isInvalid" type="number" placeholder="Ingrese su CVV" [(ngModel)]="cvv" name="deposito"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating" color="primary">Fecha de vencimiento</ion-label>
+            <ion-input required type="date" min="2023-06-01" placeholder="Ingrese su codigo CVV" [(ngModel)]="fechaVencimiento" name="deposito"></ion-input>
+          </ion-item>
+        </ion-col>
+    </ion-row>
+    </ion-grid>
+  </ion-item>
+  </ion-list>
+  
+  <ion-grid>
+    <ion-list class="custom-rounded-list">
+      <ion-item lines="none">
+        <ion-label position="floating" color="primary">Monto</ion-label>
+        <ion-input required type="number" placeholder="Ingrese el monto" [(ngModel)]="monto" name="deposito"></ion-input>
+      </ion-item>
+    </ion-list>
+  </ion-grid>
+  
+  <div class="login">
+    <ion-button fill="outline" expand="full" shape="round" color="primary" (click)="newSaldo()">Depositar</ion-button>
+  </div>
+
+</ion-content>

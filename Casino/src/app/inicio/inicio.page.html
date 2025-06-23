@@ -1,0 +1,134 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item class="custom-rounded-list">
+    <div class="ion-text-center">
+      <h1>La mejor casa de apuestas de todo México</h1>
+      <h6>Juega con moderación, Para mayores de 18.</h6>
+    </div>
+  </ion-item>
+
+  <ion-grid>
+    <h3 class="ion-text-center">Descubre los diferenes apartados que tenemos para ti</h3>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card>
+          <ion-router-link [routerLink]="'/black-jack'">
+          <img src="assets/icon/inicio_images/blackjack-card.png" alt="Card 1">
+          <ion-card-header>
+            <ion-card-title>Blackjack</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Unete a nuestra mesa de Blackjack
+          </ion-card-content>
+        </ion-router-link>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card>
+          <ion-router-link [routerLink]="'/tragamonedas'">
+          <img src="assets/icon/inicio_images/tragaperras.png" alt="Card 2">
+          <ion-card-header>
+            <ion-card-title>Tragamonedas</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Disfruta del juego de monedas mas iconico de la historia y prueba tu suerte en este juego
+          </ion-card-content>
+        </ion-router-link>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card>
+          <ion-router-link [routerLink]="'/cajero'">
+          <img src="assets/icon/inicio_images/cajero.jpg" alt="Poster 3">
+          <ion-card-header>
+            <ion-card-title>Cajero</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Deposita y retira ganancias 
+          </ion-card-content>
+        </ion-router-link>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card>
+          <ion-router-link [routerLink]="'/deportes'">
+          <img src="assets/icon/inicio_images/deportes.jpg" alt="Poster 4">
+          <ion-card-header>
+            <ion-card-title>Deportes</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Observa la variedad de deportes que tenemos para ti
+          </ion-card-content>
+        </ion-router-link>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card>
+          <ion-router-link [routerLink]="'/bonos'">
+          <img src="assets/icon/inicio_images/bono.jpg" alt="Poster 4">
+          <ion-card-header>
+            <ion-card-title>Bonos</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Verifica los bonos disponibles para ti
+          </ion-card-content>
+        </ion-router-link>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card>
+          <ion-router-link [routerLink]="'/captura-datos'">
+          <img src="assets/icon/inicio_images/cuenta.jpg" alt="Poster 4">
+          <ion-card-header>
+            <ion-card-title>Cuenta</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Observa la informacion de tu cuenta
+          </ion-card-content>
+        </ion-router-link>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+<footer class="pie-pagina">
+
+ <div class="grupo-1">
+
+      <div class="box">
+        <figure>
+          <a>
+            <img src="assets/icon/inicio_images/gob.png" alt="">
+          </a>
+        </figure>
+
+      </div>
+
+ </div>
+
+ <div class="grupo-2">
+
+  <div class="box">
+
+    <p class="foot-letra">Esta pagina esta operada por estudiantes de FCFM S.A de C.V con sede en San Nicolas de los Garza, Nuevo Leon, Mexico. regulada por la direccion general de juegos y sorteos</p>
+    <p class="foot-letra"> Numero de permiso JSJM/KSMMMA/KSDKDM/ISID/10-29</p>
+    <p class="foot-letra"> Juegue responsable, juege <b>frio</b></p>
+
+  </div>
+   <small> &copy; 2021 <b>HieloMX</b> -Todos los derechos reservados</small>
+ </div>
+
+</footer>
+
+</ion-content>

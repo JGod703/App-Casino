@@ -1,0 +1,98 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" [routerLink]="'/casino'">
+      <ion-icon name="arrow-back-outline" class="ion-padding"></ion-icon>
+    </ion-buttons>
+    <ion-title>Tragamonedas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+        <ion-card>
+          <ion-card-title class="ion-text-center">Slot 1</ion-card-title>
+          <ion-card-content [ngStyle]="{'background-image': 'url(' + slot1 + ')', 'animation-name': animateSlot1 ? 'spin' : 'none'}">
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card>
+          <ion-card-title class="ion-text-center">Slot 2</ion-card-title>
+          <ion-card-content [ngStyle]="{'background-image': 'url(' + slot2 + ')', 'animation-name': animateSlot2 ? 'spin' : 'none'}">
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card>
+          <ion-card-title class="ion-text-center">Slot 3</ion-card-title>
+          <ion-card-content [ngStyle]="{'background-image': 'url(' + slot3 + ')', 'animation-name': animateSlot3 ? 'spin' : 'none'}">
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+
+      <ion-col size="12" class="ion-text-center">
+        <ion-button fill="outline" (click)="spin()" expand="block" shape="round" [disabled]="spinning">Girar</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+        <h3>{{ message }}</h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-content class="ion-padding">
+    <ion-item lines="none" class="custom-rounded-list">
+      <ion-input [disabled]="true" class="ion-text-center" placeholder="Apuesta" [(ngModel)]="apuesta" name="apuesta" type="number"></ion-input>
+  </ion-item>
+  <ion-note>Apuesta minima: $2</ion-note>
+  <div class="texto">Saldo: {{ saldo }}</div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item [disabled]="spinning" button class="custom-rounded-list" color="warning">
+          <ion-label (click)="dos()" class="ion-text-center">+2</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item [disabled]="spinning" color="tertiary" (click)="cinco()" button class="custom-rounded-list">
+          <ion-label class="ion-text-center">+5</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item [disabled]="spinning" color="success" (click)="veinte()" button class="custom-rounded-list">
+          <ion-label  class="ion-text-center">+20</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item [disabled]="spinning" color="danger" (click)="cincuenta()" button class="custom-rounded-list">
+          <ion-label class="ion-text-center">+50</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item [disabled]="spinning" color="dark"(click)="cancelar()" button class="custom-rounded-list">
+          <ion-label class="ion-text-center">Cancelar apuesta</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card>
+    <img src="assets/icon/inicio_images/jackpot.jpg" alt="Card 1">
+    <ion-card-header>
+      <ion-card-title>Bono De Jackpot</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Todos los jueves tendras disponible un credito para jugar a Jackpot totalmente gratis!.
+    </ion-card-content>
+  </ion-card>
+  </ion-content>
+
+
+</ion-content>

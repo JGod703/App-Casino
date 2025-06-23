@@ -1,0 +1,28 @@
+ion-card-content {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotateX(0deg);
+    }
+    100% {
+      transform: rotateX(720deg);
+    }
+  }
+  
+  .custom-rounded-list {
+    border-radius: 10px; /* Ajusta el valor según el grado de redondez deseado */
+    
+  }
+  
+  .texto{
+    text-align: center;
+    padding: 5%;
+  }

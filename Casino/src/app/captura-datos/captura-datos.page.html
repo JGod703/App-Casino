@@ -1,0 +1,103 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Mi perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list class="custom-rounded-list">
+    <ion-item>
+      <ion-label class="ion-text-center">Información Personal</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label >Nombre:</ion-label>
+      <ion-card slot="end">
+        <ion-label class="ion-padding">{{nombre}}</ion-label>
+      </ion-card>
+    </ion-item>
+
+    <ion-item>
+      <ion-label >Teléfono:</ion-label>
+      <ion-card slot="end">
+        <ion-label class="ion-padding">{{telefono}}</ion-label>
+      </ion-card>
+    </ion-item>
+
+    <ion-item>
+      <ion-label >Correo:</ion-label>
+      <ion-card slot="end">
+        <ion-label class="ion-padding">{{correo}}</ion-label>
+      </ion-card>
+    </ion-item>
+
+    <ion-item>
+      <ion-label >RFC:</ion-label>
+      <ion-card slot="end">
+        <ion-label class="ion-padding">{{rfc}}</ion-label>
+      </ion-card>
+    </ion-item>
+
+    <ion-item>
+      <ion-label >Edad:</ion-label>
+      <ion-card slot="end">
+        <ion-label class="ion-padding">{{edad}}</ion-label>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+
+<br>
+
+  <ion-list class="custom-rounded-list">
+      <ion-item>
+        <ion-label class="ion-text-center">Validación</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="id-card-outline"></ion-icon>
+        <ion-label class="ion-padding"> 
+          <ion-label>Identificación</ion-label>
+          <ion-note color="danger">No aprobada</ion-note>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label class="ion-padding"> 
+          <ion-label>Comprobante de domicilio</ion-label>
+          <ion-note color="danger">No aprobada</ion-note>
+        </ion-label>
+      </ion-item>
+  </ion-list>
+
+<br>
+
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item (click)="restablecerContra()" button class="custom-rounded-list">
+            <ion-label class="ion-text-center">
+              <ion-icon name="document-text-outline"></ion-icon>
+              <ion-label>Restablecer contraseña</ion-label>
+            </ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item (click)="verificarCuenta()" button class="custom-rounded-list">
+            <ion-label class="ion-text-center">
+              <ion-icon name="card-outline"></ion-icon>
+              <ion-label>Verificar cuenta</ion-label>
+            </ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <div class="cerrar">
+      <ion-button fill="outline" expand="full" shape="round" color="danger" (click)="cerrarSesion()">Cerrar sesion</ion-button>
+    </div>
+
+
+</ion-content>

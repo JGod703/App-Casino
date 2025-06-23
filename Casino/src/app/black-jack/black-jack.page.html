@@ -1,0 +1,101 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" [routerLink]="'/casino'">
+      <ion-icon name="arrow-back-outline" class="ion-padding"></ion-icon>
+    </ion-buttons>
+    <ion-buttons slot="end" [routerLink]="'/bjinfo'">
+      <ion-icon class="ion-padding" name="information-circle-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title>black-jack</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">black-jack</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<div class="dealer">
+  <div>Puntiacion del crupier: {{ dealerScore }} {{ As }}</div>
+  <div class="table">
+    <div class="dealer-hand">
+      <div *ngFor="let card of dealerCards" class="card" [ngStyle]="{'background-image': 'url(' + card + ')'}"></div>
+    </div>
+  </div>
+</div>
+
+<div class="dealer">
+<div class="score">Puntuacion del jugador: {{ playerScore }}</div>
+  <div class="table">
+    <div class="player-hand">
+      <div *ngFor="let card of playerCards" class="card" [ngStyle]="{'background-image': 'url(' + card + ')'}"></div>
+    </div>
+  </div>
+</div>
+
+<ion-content class="ion-padding">
+  <ion-item lines="none" class="custom-rounded-list">
+    <ion-input [disabled]="true" class="ion-text-center" placeholder="Apuesta" [(ngModel)]="apuesta" name="apuesta" type="number"></ion-input>
+</ion-item>
+<ion-note>Apuesta minima: $10</ion-note>
+<div class="texto">Saldo: {{ saldo }}</div>
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-item [disabled]="playing" button class="custom-rounded-list" color="warning">
+        <ion-label (click)="diez()" class="ion-text-center">+10</ion-label>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-item [disabled]="playing" color="tertiary" (click)="veinte()" button class="custom-rounded-list">
+        <ion-label class="ion-text-center">+20</ion-label>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-item [disabled]="playing" color="success" (click)="cien()" button class="custom-rounded-list">
+        <ion-label  class="ion-text-center">+100</ion-label>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-item [disabled]="playing" color="danger" (click)="quinientos()" button class="custom-rounded-list">
+        <ion-label class="ion-text-center">+500</ion-label>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-item [disabled]="playing" color="dark"(click)="cancelar()" button class="custom-rounded-list">
+        <ion-label class="ion-text-center">Cancelar apuesta</ion-label>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+ 
+<ion-col size="12" class="ion-text-center">
+  <ion-button (click)="dealCards()" fill="outline" expand="block" [disabled]="playing" shape="round">Jugar</ion-button>
+</ion-col>
+<div class="texto">Resultado: {{ resultado }}</div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button fill="outline" color="primary" expand="block" (click)="hit()" shape="round">Pedir</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button fill="outline" color="danger" expand="block"(click)="stand()" shape="round">Plantarse</ion-button>
+      </ion-col>
+    </ion-row>
+    <div class="texto">Si el crupier tiene A en la primera carta, y deseas usar el seguro presiona este boton</div>
+    <ion-button fill="outline" color="danger" expand="block"(click)="seguro()" shape="round">Seguro</ion-button>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button fill="outline" style="display:none" id="seguro" color="primary" expand="block" (click)="SeguroSi()" shape="round">Si</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button fill="outline" style="display:none" id="seguro2" color="danger" expand="block"(click)="SeguroNo()" shape="round">No</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+</ion-content>

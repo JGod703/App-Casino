@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-icon class="ion-padding" name="chatbubble-ellipses-outline" [routerLink]="'/detallespago'" aria-label="Chat"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Bienvenido</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <img src="assets/icon/inicio_images/LogoFM.png">
+<ion-list class="custom-rounded-list">
+  <ion-item lines="none">
+    <ion-label position="floating" color="primary">Correo electrónico</ion-label>
+    <ion-input placeholder="Ingrese su correo" type="email" [(ngModel)]="credenciales.email" class="input-field"></ion-input>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-label position="floating" color="primary">Contraseña</ion-label>
+    <ion-input placeholder="Ingrese su contrasña"type="password" [(ngModel)]="credenciales.password" [type]="showPassword ? 'text' : 'password'"class="input-field"></ion-input>
+    <ion-icon name="{{ showPassword ? 'eye-off-outline' : 'eye-outline' }}" slot="end" (click)="togglePasswordVisibility()"></ion-icon>
+  </ion-item>
+</ion-list>
+  <div class="login">
+    <ion-button fill="outline" expand="full" shape="round" color="primary" (click)="login()">Iniciar sesión</ion-button>
+    
+</div>
+
+  <div class="registrar">
+    <ion-note>¿No tienes cuenta?</ion-note>
+    <ion-button fill="outline" expand="full" shape="round" routerLink="/registro">Registrate Ahora</ion-button>
+  </div>
+</ion-content>

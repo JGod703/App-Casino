@@ -1,0 +1,44 @@
+
+
+.pie-pagina{
+width:100%;
+Background-color: #0a141d;
+
+}
+
+.pie-pagina .grupo-1{
+width:100%;
+Max-width:1200px;
+Margin:auto;
+Display:grid;
+Grid-template-columns:repeat(2,1fr);
+Grid-gap:50px;
+Padding:45px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure{
+Width:200%;
+Height:100%;
+display: flex;
+Justify-content:center;
+Align-items:center;
+
+}
+
+.pie-pagina .grupo-1 .box figure img{
+widht: 100%;
+
+}
+
+.foot-letra{
+Font-size:15px;
+}
+
+.pie-pagina .grupo-2{
+Text-align: center;
+}
+
+.custom-rounded-list {
+    border-radius: 10px; /* Ajusta el valor según el grado de redondez deseado */
+}
+  
